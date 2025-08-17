@@ -1,11 +1,13 @@
 from typing import List
-
+from core.logger import setup_logging
 import opuslib_next
 import numpy as np
 from pydub import AudioSegment
 from io import BytesIO
 import os
 
+TAG = __name__
+logger = setup_logging()
 
 def check_model_key(modelType, modelKey):
     if "你" in modelKey:
@@ -51,7 +53,7 @@ def pcm_to_data(raw_data, is_opus=True):
     # 按帧处理所有音频数据（包括最后一帧可能补零）
     for i in range(0, len(raw_data), frame_size * 2):  # 16bit=2bytes/sample
         # 获取当前帧的二进制数据
-        chunk = raw_data[i: i + frame_size * 2]
+        chunk = raw_data[i : i + frame_size * 2]
 
         # 如果最后一帧不足，补零
         if len(chunk) < frame_size * 2:
@@ -95,7 +97,7 @@ def audio_bytes_to_data(audio_bytes, file_type, is_opus=True):
     """
     直接用音频二进制数据转为opus/pcm数据，支持wav、mp3、p3
     """
-
+    
     # 其他格式用pydub
     audio = AudioSegment.from_file(
         BytesIO(audio_bytes), format=file_type, parameters=["-nostdin"]
@@ -105,7 +107,7 @@ def audio_bytes_to_data(audio_bytes, file_type, is_opus=True):
     raw_data = audio.raw_data
     return pcm_to_data(raw_data, is_opus), duration
 
-async def decode_opus(opus_data: List[bytes]) -> List[bytes]:
+def decode_opus(opus_data: List[bytes]) -> List[bytes]:
     """将Opus音频数据解码为PCM数据"""
     try:
         decoder = opuslib_next.Decoder(16000, 1)

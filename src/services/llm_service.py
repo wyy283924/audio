@@ -5,15 +5,16 @@ import openai
 
 from fastapi import Depends
 
-from src.core.config import get_llm_config
-from src.core.logger import setup_logging
-from src.utils.util import check_model_key
+from core.config import get_llm_config
+from core.logger import setup_logging
+from utils.util import check_model_key
 
 TAG = __name__
 logger = setup_logging()
 
 @lru_cache(maxsize=1)
-async def init_llm(config: dict = Depends(get_llm_config)):
+def init_llm():
+    config = get_llm_config()
     api_key = config.get("api_key")
     base_url = config.get("url")
     timeout = config.get("timeout", 300)
@@ -26,15 +27,16 @@ async def init_llm(config: dict = Depends(get_llm_config)):
     return client
 
 
-async def response_no_stream(system_prompt, user_prompt, client, config: dict = Depends(get_llm_config)):
+async def response_no_stream(system_prompt, user_prompt, client):
     try:
+        config = get_llm_config()
         # 构造对话格式
         dialogue = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ]
         result = ""
-        for part in response(dialogue, client, config):
+        async for part in response(dialogue, client, config):
             result += part
         return result
 
@@ -45,6 +47,8 @@ async def response_no_stream(system_prompt, user_prompt, client, config: dict = 
 
 async def response(dialogue, client, config: dict):
     try:
+        logger.bind(tag=TAG).debug(f"Sending request to LLM with dialogue: {dialogue},{client}")
+
         responses = client.chat.completions.create(
             model=config.get("model_name"),
             messages=dialogue,

@@ -3,8 +3,8 @@ from typing import List
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from src.api.v1.endpoints.asr import get_asr_response
-from src.api.v1.endpoints.llm import get_llm_response
+from api.v1.endpoints.asr import get_asr_response
+from api.v1.endpoints.llm import get_llm_response
 
 router = APIRouter()
 
@@ -13,7 +13,7 @@ class Message(BaseModel):
     data: List[str]
 
 
-@router.get("/")
+@router.post("/")
 async def root(message: Message):
     if message.method == "audio":
         return await get_asr_response(message.data)

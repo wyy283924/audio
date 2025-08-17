@@ -1,0 +1,80 @@
+2025-08-16 18:47:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-16 18:47:39 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-16 18:57:26 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-16 18:57:26 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-16 19:21:11 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in Ollama response generation: 'async_generator' object is not iterable
+2025-08-16 19:24:32 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in Ollama response generation: 'async_generator' object is not iterable
+2025-08-16 19:27:02 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in Ollama response generation: 'async_generator' object is not iterable
+2025-08-16 19:28:05 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in Ollama response generation: 'async_generator' object is not iterable
+2025-08-16 21:47:43 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in Ollama response generation: 'async_generator' object is not iterable
+2025-08-16 21:48:23 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: 'Depends' object has no attribute 'get'
+2025-08-16 21:49:11 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: 'Depends' object has no attribute 'get'
+2025-08-16 21:51:40 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: 'Depends' object has no attribute 'get'
+2025-08-17 06:30:45 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:30:45 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-17 06:30:46 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: Error code: 400 - {'error': {'code': '1213', 'message': '未正常接收到prompt参数。'}}
+2025-08-17 06:32:17 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:32:17 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-17 06:37:10 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 06:37:10 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 06:37:10 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:37:10 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-17 06:37:10 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: Error code: 400 - {'error': {'code': '1213', 'message': '未正常接收到prompt参数。'}}
+2025-08-17 06:39:58 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 06:39:58 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 06:39:58 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:39:58 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: can only join an iterable
+2025-08-17 06:39:59 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: Error code: 400 - {'error': {'code': '1213', 'message': '未正常接收到prompt参数。'}}
+2025-08-17 06:41:00 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 06:41:00 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 06:41:00 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:41:00 - 0.7.2_00000000000000 - services.asr_service - ERROR - services.asr_service - 语音识别失败: object of type 'coroutine' has no len()
+2025-08-17 06:41:00 - 0.7.2_00000000000000 - services.llm_service - ERROR - services.llm_service - Error in response generation: Error code: 400 - {'error': {'code': '1213', 'message': '未正常接收到prompt参数。'}}
+2025-08-17 06:42:22 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 06:42:22 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 06:42:22 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:42:22 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:49:03 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 06:49:03 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 06:49:03 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 06:49:03 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:20:37 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:20:37 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:24:20 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:24:20 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:29:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 12:29:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 12:29:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 12:29:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 15:25:45 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 15:25:45 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 15:25:45 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 15:25:46 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.415s | 结果: place 놀而 separateLo Plan锔으로써而堋 infant渠快剣快而 crystal快藿快锔快藿快锔 reception fu剣Lo櫺餒櫺藿迴快僂 crystal嵌Different剣sp crystal砊婢 crystal嵌place诛锔探渊锔 op快餅渠ud states involved快謩 reception餅 reception Labor古 fighter謩快而迴而 crystal op 유용한剣keeper快剣삭而 받는 when栾 유용한 outdoor states砊 reception迴 reception 차 symptoms謩 향快 symptoms快 symptoms medicine快Lo reception快藿渠藿
+2025-08-17 15:26:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 15:26:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 15:26:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 15:27:00 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.418s | 结果: place 놀而 separateLo Plan锔으로써而堋 infant渠快剣快而 crystal快藿快锔快藿快锔 reception fu剣Lo櫺餒櫺藿迴快僂 crystal嵌Different剣sp crystal砊婢 crystal嵌place诛锔探渊锔 op快餅渠ud states involved快謩 reception餅 reception Labor古 fighter謩快而迴而 crystal op 유용한剣keeper快剣삭而 받는 when栾 유용한 outdoor states砊 reception迴 reception 차 symptoms謩 향快 symptoms快 symptoms medicine快Lo reception快藿渠藿
+2025-08-17 15:28:18 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 15:28:18 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.106s | 结果: Eventually 힘이 Brook邃埃
+2025-08-17 15:46:48 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 15:46:48 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 15:46:48 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 15:46:52 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.385s | 结果: place frustration而 op earth으로써 feels으로써而으로써栾而藿而 earth剣 crystal earth快而栾而輳으로써而藿栾藿快 earth crystal藿 신경 crystal剣栾蠼 신경 earth crystalplace earthplace 차快探还藿 turnover还 detector栾快栾霖栾 reception霖餅 제栾迴快藿快藿으로써藿栾釧藿而藿而藿栾快 대기업快 earth快 estimated 차霖 차 신경 향快 earth快 considerably reception釧으로써而藿愬藿
+2025-08-17 16:08:35 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 16:08:37 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.361s | 结果: place 놀而謩 medicine integral 면접锔으로써而藿而锔而快藿而藿而快而快藿而Lo掺锔櫺锔室櫺藿快藿快陧 덜 utilization瘋砊 놀符sp嵌 crystal値 crystalzzsp flipped configure 면접藿勖 crystalベ藿 유용한渠藿渠今砊 reception states杜place餒 만快 reception泵而藿快 utilization而迴而藿掺 놀牁 놀 states 대기업 states spirit 봅니다 crystal spirit材 봅니다 차霖快牌 reception overnight忙而 overnight藿 overnight暈
+2025-08-17 16:14:14 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 16:14:14 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 16:14:14 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 16:14:16 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.322s | 结果: place 놀蕋 highway 놀 medicine藿洏 acquiring藿櫺藿 states crystal藿 states crystal嶮sp嶮 states씁藿 면접锔藿勖藿快藿 reception通 reception 향 reception induction reception快藿ny藿掺栾藿而藿 놀藿快 대기업快 대기업栾 states快 향 봅니다藿快剣快 reception快釧快藿 platform藿
+2025-08-17 16:54:55 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 16:54:56 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.322s | 结果: 剣 놀瘋 highway快 Plan而洏而快而剣而剣而剣Lo锔 crystal而鼩 crystal锔藿 crystal而藿快藿快 crystal states快锔泵藿 crystal藿 utilization快 reception crystal reception symptoms快而 crystal迴藿嵌快而 im crystal快 봅니다 spirit霖 spirit霖 fighter spirit symptoms spirit快霖快剣锔剣快剣而藿凪
+2025-08-17 18:34:01 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 18:34:01 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 18:34:01 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 18:34:08 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.399s | 结果: 🎼you.
+2025-08-17 18:34:53 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 18:34:57 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.340s | 结果: the.
+2025-08-17 18:35:38 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 18:35:41 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.296s | 结果: 你.
+2025-08-17 18:36:42 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 18:36:46 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.366s | 结果: 你好。

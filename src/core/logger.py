@@ -1,7 +1,7 @@
 import os
 import sys
 from loguru import logger
-from src.core.config import load_config
+from core.config import load_config
 
 SERVER_VERSION = "0.7.2"
 _logger_initialized = False

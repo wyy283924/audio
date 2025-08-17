@@ -27,5 +27,4 @@
 |	|	|— util.py                                      # 工具
 |	|	|— opus_encoder_utils.py                        # opus编码器
 |— static/                                              # 静态文件
-|	|— demo.py		        	                        # 
-|	|— core/				                            # 
+|	|— demo.py		        	                        # gradio				                            # 

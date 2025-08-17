@@ -1,11 +1,10 @@
 from functools import lru_cache
 from typing import Tuple, Optional, List
-import opuslib_next
 from fastapi import Depends
 
-from src.core.config import load_config
-from src.core.logger import setup_logging
-from src.core.config import get_project_dir
+from core.config import get_asr_config
+from core.logger import setup_logging
+from core.config import get_project_dir
 
 from funasr.utils.postprocess_utils import rich_transcription_postprocess
 from funasr import AutoModel
@@ -16,7 +15,7 @@ import io
 import sys
 import time
 
-from src.utils.util import decode_opus
+from utils.util import decode_opus
 
 TAG = __name__
 logger = setup_logging()
@@ -43,7 +42,8 @@ class CaptureOutput:
 
 
 @lru_cache(maxsize=1)
-async def init_asr(config: dict = Depends(load_config)):
+def init_asr():
+    config = get_asr_config()
     # 内存检测，要求大于2G
     min_mem_bytes = 2 * 1024 * 1024 * 1024
     total_mem = psutil.virtual_memory().total
@@ -82,7 +82,7 @@ async def speech_to_text(
             else:
                 pcm_data = decode_opus(opus_data)
             combined_pcm_data = b''.join(pcm_data)
-            logger.bind(tag=TAG).info("stt开始", combined_pcm_data)
+            print(combined_pcm_data)
 
             # 语音识别
             start_time = time.time()
@@ -94,7 +94,7 @@ async def speech_to_text(
                 batch_size_s=60,
             )
             text = rich_transcription_postprocess(result[0]["text"])
-            logger.bind(tag=TAG).debug(
+            logger.bind(tag=TAG).info(
                 f"语音识别耗时: {time.time() - start_time:.3f}s | 结果: {text}"
             )
 
