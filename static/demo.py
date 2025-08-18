@@ -7,7 +7,8 @@ import gradio as gr
 import numpy as np
 import requests
 
-async def decode_opus(opus_data: List[bytes]) -> List[bytes]:
+
+def decode_opus(opus_data: List[bytes]) -> List[bytes]:
     """将Opus音频数据解码为PCM数据"""
     try:
         decoder = opuslib_next.Decoder(16000, 1)
@@ -34,58 +35,46 @@ async def decode_opus(opus_data: List[bytes]) -> List[bytes]:
         return []
 
 
-import numpy as np
-import opuslib_next  # 确保只在需要时使用
+def pcm_to_data(raw_data: np.ndarray):
+    raw_bytes = raw_data.tobytes()
+    # 初始化编码器
+    encoder = opuslib_next.Encoder(16000, 1, opuslib_next.APPLICATION_AUDIO)
 
-def pcm_to_data(raw_data, is_opus=True):
-    # 参数验证
+    # 编码参数
+    frame_duration = 60  # 60ms per frame
+    frame_size = int(16000 * frame_duration / 1000)  # 960 samples/frame
 
-    # 动态初始化编码器（仅在需要时）
-    encoder = None
-    if is_opus:
-        encoder = opuslib_next.Encoder(16000, 1, opuslib_next.APPLICATION_AUDIO)
-    
-    # 常量设置
-    SAMPLE_RATE = 16000
-    FRAME_DURATION_MS = 60
-    SAMPLES_PER_FRAME = int(SAMPLE_RATE * FRAME_DURATION_MS / 1000)
-    BYTES_PER_FRAME = SAMPLES_PER_FRAME * 2  # 16-bit = 2 bytes
-    
-    # 将整个数组转换为字节一次（提高效率）
-    frame_bytes = raw_data.tobytes()
-    total_bytes = len(frame_bytes)
-    
     datas = []
-    # 按帧处理音频数据
-    for start in range(0, total_bytes, BYTES_PER_FRAME):
-        end = start + BYTES_PER_FRAME
-        chunk = frame_bytes[start:end]
-        
-        # 处理最后一帧填充
-        if len(chunk) < BYTES_PER_FRAME:
-            chunk = chunk.ljust(BYTES_PER_FRAME, b'\x00')
-        
-        if is_opus:
-            frame_data = encoder.encode(chunk, SAMPLES_PER_FRAME)
-        else:
-            frame_data = chunk  # 已经是bytes类型
-        
-        datas.append(frame_data)
-    
-    return datas
+    # 按帧处理所有音频数据（包括最后一帧可能补零）
+    for i in range(0, len(raw_bytes), frame_size * 2):  # 16bit=2bytes/sample
+        # 获取当前帧的二进制数据
+        chunk = raw_bytes[i: i + frame_size * 2]
 
+        # 如果最后一帧不足，补零
+        if len(chunk) < frame_size * 2:
+            chunk += b"\x00" * (frame_size * 2 - len(chunk))
+
+        # 转换为numpy数组处理
+        np_frame = np.frombuffer(chunk, dtype=np.int16)
+        # 编码Opus数据
+        frame_data = encoder.encode(np_frame.tobytes(), frame_size)
+
+
+        datas.append(frame_data)
+
+    return datas
 
 
 async def send_to_http(message, type):
     try:
+        print(message)
         response = requests.post(  # 使用POST方法
             "http://localhost:8002/api/v1/response",
             json={
-                "type": type,
+                "method": type,
                 "data": message
             }
         )
-        print("请求已发送，请等待")
         logging.info("请求已发送，请等待")
         result = response.json()  # 获取JSON响应
         asr_result = result["asr_result"]
@@ -103,7 +92,9 @@ async def send_to_http(message, type):
 
 
 async def generate_audio_response(audio_in):
-    chunkList = pcm_to_data(audio_in)
+    chunkList = pcm_to_data(audio_in[1])
+    chunkList = [base64.b64encode(item).decode("utf-8") for item in chunkList]
+
     return await send_to_http(chunkList, "audio")
 
 
@@ -114,7 +105,7 @@ async def generate_text_response(text):
 with gr.Blocks() as block:
     with gr.Group():
         with gr.Row():
-            audio_out = gr.Audio(label="Spoken Answer", streaming=True, autoplay=True)
+            audio_out = gr.Audio(label="Spoken Answer",autoplay=True)
             answer = gr.Textbox(label="Answer")
             state = gr.State()
         with gr.Row():

@@ -78,3 +78,7 @@
 2025-08-17 18:35:41 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.296s | 结果: 你.
 2025-08-17 18:36:42 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
 2025-08-17 18:36:46 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.366s | 结果: 你好。
+2025-08-17 19:42:33 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-17 19:42:33 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-17 19:42:33 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-17 19:42:34 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.285s | 结果: 二号。
