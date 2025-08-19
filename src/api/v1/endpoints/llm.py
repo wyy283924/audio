@@ -23,6 +23,7 @@ async def get_llm_response(result:str = Body(..., embed=True)):
         )
     
     return {
+        "status": "success",
         "asr_result": result[0],
         "llm_response": response,
         "tts_result": [base64.b64encode(item).decode("utf-8") for item in audio_datas]   # 如果需要TTS结果，可以在这里添加逻辑
