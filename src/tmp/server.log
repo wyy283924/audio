@@ -86,3 +86,25 @@
 2025-08-19 20:37:54 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
 2025-08-19 20:37:54 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
 2025-08-19 20:37:56 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.359s | 结果: 你好。
+2025-08-20 21:52:12 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-20 21:52:12 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-20 21:52:12 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 21:52:31 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.458s | 结果: 你 have.
+2025-08-20 21:53:25 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 21:53:29 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.449s | 结果: 你好请问你是谁？
+2025-08-20 21:56:24 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 21:57:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.434s | 结果: 你好请你是谁。
+2025-08-20 21:58:33 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 21:58:46 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.415s | 结果: Do have to.
+2025-08-20 21:59:30 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 22:00:18 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.366s | 结果: You好 to你.
+2025-08-20 22:01:59 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-20 22:01:59 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-20 22:01:59 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 22:01:59 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.303s | 结果: you have.
+2025-08-20 22:02:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-20 22:02:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.300s | 结果: 你ho.
+2025-08-21 19:12:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - funasr version: 1.2.3.
+2025-08-21 19:12:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - ASR初始化完成
+2025-08-21 19:12:39 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - stt开始
+2025-08-21 19:12:40 - 0.7.2_00000000000000 - services.asr_service - INFO - services.asr_service - 语音识别耗时: 0.333s | 结果: You home to.

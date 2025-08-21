@@ -82,7 +82,6 @@ async def speech_to_text(
             else:
                 pcm_data = decode_opus(opus_data)
             combined_pcm_data = b''.join(pcm_data)
-            print(combined_pcm_data)
 
             # 语音识别
             start_time = time.time()
